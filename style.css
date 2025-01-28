@@ -1,0 +1,129 @@
+main {
+  margin: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: block;
+}
+/* HEADER */
+ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menutekst {
+  display: block;
+  padding: 1rem;
+  margin-inline: 2rem;
+  text-decoration: solid;
+  color: black;
+  background-color: white;
+  font-family: "Carlito", sans-serif;
+  font-size: 1.2rem;
+}
+
+.menutekst:hover {
+  color: blue;
+}
+/* Forside */
+.category_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(192, 192, 192);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Produktliste */
+.readmore_knap {
+  color: black;
+  background-color: white;
+  padding: 0rem;
+  text-align: left;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.readmore_knap:hover {
+  color: blue;
+}
+
+.product_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.boks {
+  display: grid;
+  grid-template-columns: subgrid; /* Brug subgrid til at arve bredde */
+  grid-template-rows: auto auto 1fr auto auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.rabatboks {
+  display: grid;
+  grid-template-columns: subgrid; /* Brug subgrid til at arve bredde */
+  grid-template-rows: auto auto 1fr auto auto;
+  padding: 1rem;
+  position: relative;
+}
+.discount {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.product-image.sold-out img {
+  filter: grayscale(100%);
+  opacity: 0.6; /* Reducer gennemsigtigheden lidt */
+}
+.sold-out-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(79, 78, 78);
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  z-index: 2;
+}
+.product-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+}
+.articletype {
+  color: grey;
+}
