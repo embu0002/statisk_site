@@ -16,41 +16,70 @@ img {
   display: block;
 }
 /* HEADER */
-ul {
+header {
   display: flex;
-  align-items: flex-start;
-  justify-content: right;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
+
+.logo {
+  flex: 1;
+}
+
+.logo_tag {
+  color: #090995;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  text-align: right;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
 .menutekst {
-  display: block;
-  padding: 1rem;
-  margin-inline: 2rem;
-  text-decoration: solid;
+  text-decoration: none;
+  font-size: 19px;
   color: black;
-  background-color: white;
-  font-family: "Carlito", sans-serif;
-  font-size: 1.2rem;
 }
 
 .menutekst:hover {
-  color: blue;
+  text-decoration: underline;
 }
+
 /* Forside */
 .category_list_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+h1 {
+  margin-left: 10rem;
 }
 
-a {
-  text-decoration: none;
+.forsidetag {
+  background-color: transparent;
+  border: 2px solid black;
   color: black;
-  background-color: rgb(192, 192, 192);
-  padding: 1rem;
+  padding: 10px 15px;
   text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.forsidetag:hover {
+  color: blue;
 }
 
 /* Produktliste */
@@ -66,28 +95,29 @@ a {
 .readmore_knap:hover {
   color: blue;
 }
+@media (min-width: 600px) {
+  .product_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+    gap: 10px;
+  }
 
-.product_list_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 10px;
-}
+  .boks {
+    display: grid;
+    grid-template-columns: subgrid; /* subgrid til at arve bredde */
+    grid-template-rows: auto auto 1fr auto auto;
+    padding: 1rem;
+    position: relative;
+  }
 
-.boks {
-  display: grid;
-  grid-template-columns: subgrid; /* Brug subgrid til at arve bredde */
-  grid-template-rows: auto auto 1fr auto auto;
-  padding: 1rem;
-  position: relative;
-}
-
-.rabatboks {
-  display: grid;
-  grid-template-columns: subgrid; /* Brug subgrid til at arve bredde */
-  grid-template-rows: auto auto 1fr auto auto;
-  padding: 1rem;
-  position: relative;
+  .rabatboks {
+    display: grid;
+    grid-template-columns: subgrid; /* subgrid til at arve bredde */
+    grid-template-rows: auto auto 1fr auto auto;
+    padding: 1rem;
+    position: relative;
+  }
 }
 .discount {
   position: absolute;
@@ -101,7 +131,7 @@ a {
 }
 .product-image.sold-out img {
   filter: grayscale(100%);
-  opacity: 0.6; /* Reducer gennemsigtigheden lidt */
+  opacity: 0.6;
 }
 .sold-out-label {
   position: absolute;
@@ -126,4 +156,91 @@ a {
 }
 .articletype {
   color: grey;
+}
+
+/* Produkt side */
+.h2_procuctcard {
+  font-size: 2rem;
+  margin-top: -1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-top: 3.5rem;
+}
+h4 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .produkt_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-right: 5rem;
+    gap: 20px;
+  }
+}
+
+.h1påprodukt {
+  margin-left: 0.1rem;
+}
+
+.product-card {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  margin-top: 5.5rem;
+}
+
+select {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.produkt_billede {
+  margin-right: 2rem;
+}
+
+.productcard {
+  background-color: #d9d9d9;
+  padding: 1rem;
 }
