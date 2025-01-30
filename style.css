@@ -172,7 +172,7 @@ h4 {
   margin-top: 1rem;
 }
 @media (min-width: 600px) {
-  .produkt_container {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
