@@ -1,5 +1,6 @@
+const categories = new URLSearchParams(window.location.search).get("category");
 const listContainer = document.querySelector(".product_list_container");
-fetch(`https://kea-alt-del.dk/t7/api/products/`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=` + categories)
   .then((response) => response.json())
   .then((data) => showList(data));
 
@@ -15,12 +16,10 @@ function showList(products) {
                 <h3>${product.productdisplayname}</h3>
                 <p class="articletype">Tshirts / Nike</p>
                 <p>${product.price}DKK,-</p>
-                <a class="readmore_knap" href="produkt.html">Read more</a>
+                <a class="readmore_knap" href="produkt.html?id=${product.id}">Read more</a>
             </div>
             `
     )
     .join("");
   listContainer.innerHTML = markup;
 }
-
-// console.log(markup);
