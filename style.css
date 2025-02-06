@@ -114,12 +114,12 @@ h1 {
 
 .discount_label {
   position: absolute;
-  bottom: 20px;
+  bottom: 48px;
   left: 150px;
-  background-color: red;
+  background-color: #e11;
   color: white;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 10px 15px;
   z-index: 2;
 }
 .product-image.sold-out img {
@@ -157,6 +157,21 @@ h1 {
   color: grey;
 }
 
+.filter_knap {
+  width: 9%;
+  padding: 10px;
+  background-color: #717070;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter_knap:hover {
+  background-color: #9b8989;
+}
 /* Produkt side */
 .h2_procuctcard {
   font-size: 2rem;
