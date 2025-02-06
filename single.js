@@ -16,7 +16,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${identity}`)
                 <h4>${data.variantname}</h4>
                 <p>Product ID</p>
                 <h4>${data.id}</h4>
-
                 <h2>${data.brandname}</h2>
                 <p>Nike creating experiences or today's athlete</p>
             </div>
@@ -25,6 +24,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${identity}`)
                 <p>Nike / Tshirts</p>
                
                 <h4>Pris ${data.price} kr</h4>
+                <div class="discount_card ${data.discount === null ? "hidden" : ""}" >${data.discount}%</div>
+                <div class="soldout_card" ${data.soldout === 0 ? "hidden" : ""}>${data.soldout}</div>
                 <label for="size">Choose a size</label>
                 <select id="size" name="size">
                     <option value="S">S</option>
